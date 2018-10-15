@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import HomePage from "./pages/home.jsx"
+
 const App = () => {
-  return (
-    <div>
-      <p>React here!</p>
-    </div>
-  );
+
+  return <HomePage/>;
+
 };
-export default App;
+
 ReactDOM.render(<App />, document.getElementById("app"));
