@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { csvJSON } from "../helpers/csv-to-json";
+import { getPearsonCorrelation } from "../helpers/get-pearsons-correlation";
 
 class HomePage extends Component {
 
