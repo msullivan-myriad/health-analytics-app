@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { csvJSON } from "../helpers/csv-to-json";
 import { getPearsonCorrelation } from "../helpers/get-pearsons-correlation";
-import dailyValuesJson from '../data/daily-values-csv-to-json.json';
+//import dailyValuesJson from '../data/daily-values-csv-to-json.json';
+import dailyValuesJson from '../data/formatted-daily-values.json';
 import mfpData from '../data/mfpdata.json';
 
 
@@ -10,28 +11,63 @@ class HomePage extends Component {
     constructor(props){
         super(props);
 
-        const sodium = [];
-        const carbohydrates = [];
-        const calories = [];
-        const fat = [];
-        const sugar = [];
+        const dataObject = {
+            sodium: [],
+            carbohydrates: [],
+            calories: [],
+            fat: [],
+            sugar: [],
+        };
 
         mfpData.forEach(day => {
-            sodium.push(day.sodium);
-            carbohydrates.push(day.carbohydrates);
-            calories.push(day.calories);
-            fat.push(day.fat);
-            sugar.push(day.sugar);
+            dataObject.sodium.push(day.sodium);
+            dataObject.carbohydrates.push(day.carbohydrates);
+            dataObject.calories.push(day.calories);
+            dataObject.fat.push(day.fat);
+            dataObject.sugar.push(day.sugar);
         })
 
-        console.log(dailyValuesJson);
-
         const dvKeys = this.getDailyValuesKeys(dailyValuesJson);
-
         const dvList = this.createDailyValuesList(dailyValuesJson, dvKeys);
 
-        console.log(dvKeys);
-        console.log(dvList);
+
+        //List of all correlated object data
+
+        const correlatedData = [];
+
+        dvKeys.forEach(key => {
+
+            if (key != 'Measurement') {
+
+                let list = dvList[key];
+
+                Object.keys(dataObject).forEach(doKey => {
+
+                    let correlation = getPearsonCorrelation(list, dataObject[doKey]);
+                    let correlationDirection = correlation > 0 ? 'positive' : 'negative';
+
+
+                    correlatedData.push({
+                        'key' : key,
+                        'compared_against' : doKey,
+                        'correlation' : Math.abs(correlation),
+                        'correlation_direction' : correlationDirection,
+                    })
+
+
+                })
+
+
+            }
+
+        })
+
+
+        correlatedData.sort((a, b) => {
+            return b.correlation - a.correlation;
+        })
+
+        console.table(correlatedData);
 
     }
 
@@ -56,7 +92,10 @@ class HomePage extends Component {
 
                 dailyValuesKeys.forEach(objKey => {
 
-                    dailyValuesLists[objKey].push(values[objKey]);
+
+                    if (objKey != 'Measurement') {
+                        dailyValuesLists[objKey].push(values[objKey]);
+                    }
 
                 })
 
