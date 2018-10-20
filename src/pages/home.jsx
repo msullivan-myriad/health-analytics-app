@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { csvJSON } from "../helpers/csv-to-json";
 import { getPearsonCorrelation } from "../helpers/get-pearsons-correlation";
-import dailyValues from '../data/daily-values-csv-to-json.json';
+import dailyValuesJson from '../data/daily-values-csv-to-json.json';
 import mfpData from '../data/mfpdata.json';
 
 
@@ -9,11 +9,6 @@ class HomePage extends Component {
 
     constructor(props){
         super(props);
-
-        console.log('Daily values: ');
-        console.log(dailyValues);
-        console.log('MFP Data: ');
-        console.log(mfpData);
 
         const sodium = [];
         const carbohydrates = [];
@@ -29,21 +24,29 @@ class HomePage extends Component {
             sugar.push(day.sugar);
         })
 
-        /*
-        console.log('Sodium: ', sodium);
-        console.log('Carbs: ', carbohydrates);
-        console.log('Calories: ', calories);
-        console.log('Fat: ', fat);
-        console.log('Sugar: ', sugar);
-        */
+        console.log(dailyValuesJson);
+
+        const dvKeys = this.getDailyValuesKeys(dailyValuesJson);
+
+        const dvList = this.createDailyValuesList(dailyValuesJson, dvKeys);
+
+        console.log(dvKeys);
+        console.log(dvList);
+
+    }
+
+    getDailyValuesKeys(dailyValues) {
+        return Object.keys(dailyValues[0]);
+    }
+
+    //Create object of lists of daily value numbers when given a daily values object
+    //Could be worth passing two dates to this in the future rather than blindly relying on
+    //the length of the list
+    createDailyValuesList(dailyValues, dailyValuesKeys) {
 
         const dailyValuesLists = {};
 
-        const objectKeys = Object.keys(dailyValues[0]);
-
-        console.log('Object Keys:', objectKeys);
-
-        objectKeys.forEach(key => {
+        dailyValuesKeys.forEach(key => {
 
             dailyValuesLists[key] = [];
 
@@ -51,9 +54,7 @@ class HomePage extends Component {
 
         dailyValues.forEach(values => {
 
-                console.log(values);
-
-                objectKeys.forEach(objKey => {
+                dailyValuesKeys.forEach(objKey => {
 
                     dailyValuesLists[objKey].push(values[objKey]);
 
@@ -61,11 +62,8 @@ class HomePage extends Component {
 
         })
 
-        console.log('Daily values lists object: ', dailyValuesLists);
+        return dailyValuesLists;
 
-    }
-
-    componentDidMount() {
     }
 
     render(){

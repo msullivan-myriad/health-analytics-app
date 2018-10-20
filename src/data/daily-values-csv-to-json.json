@@ -13,8 +13,7 @@
     "Happiness": "Range (1-10) measured in the evening over the course of a day, entered in the PM",
     "Exercise Intensity": "Range (1-10) measured in the evening over the course of a day, entered in the PM",
     "Caffiene": "Estimated Consumption in millegrams",
-    "Alcohol": "Measured in total number of drinks",
-    "": ""
+    "Alcohol": "Measured in total number of drinks"
   },
   {
     "Measurement": "Date:",
@@ -30,8 +29,7 @@
     "Happiness": "",
     "Exercise Intensity": "",
     "Caffiene": "",
-    "Alcohol": "",
-    "": ""
+    "Alcohol": ""
   },
   {
     "Measurement": "7/1/18",
@@ -47,8 +45,7 @@
     "Happiness": 7,
     "Exercise Intensity": 0,
     "Caffiene": 100,
-    "Alcohol": 0,
-    "": ""
+    "Alcohol": 0
   },
   {
     "Measurement": "7/2/18",
@@ -64,8 +61,7 @@
     "Happiness": 8,
     "Exercise Intensity": 6,
     "Caffiene": 300,
-    "Alcohol": 4,
-    "": ""
+    "Alcohol": 4
   },
   {
     "Measurement": "7/3/18",
@@ -81,8 +77,7 @@
     "Happiness": 6,
     "Exercise Intensity": 4,
     "Caffiene": 0,
-    "Alcohol": 0,
-    "": ""
+    "Alcohol": 0
   },
   {
     "Measurement": "7/4/18",
@@ -98,8 +93,7 @@
     "Happiness": 6,
     "Exercise Intensity": 4,
     "Caffiene": 0,
-    "Alcohol": 0,
-    "": ""
+    "Alcohol": 0
   },
   {
     "Measurement": "7/5/18",
@@ -115,8 +109,7 @@
     "Happiness": 8,
     "Exercise Intensity": 5,
     "Caffiene": 100,
-    "Alcohol": 0,
-    "": ""
+    "Alcohol": 0
   },
   {
     "Measurement": "7/6/18",
@@ -132,8 +125,7 @@
     "Happiness": 8,
     "Exercise Intensity": 7,
     "Caffiene": 200,
-    "Alcohol": 0,
-    "": ""
+    "Alcohol": 0
   },
   {
     "Measurement": "7/7/18",
@@ -149,8 +141,7 @@
     "Happiness": 5,
     "Exercise Intensity": 6,
     "Caffiene": 100,
-    "Alcohol": 0,
-    "": ""
+    "Alcohol": 0
   },
   {
     "Measurement": "7/8/18",
@@ -166,8 +157,7 @@
     "Happiness": 10,
     "Exercise Intensity": 8,
     "Caffiene": 300,
-    "Alcohol": 7,
-    "": ""
+    "Alcohol": 7
   },
   {
     "Measurement": "7/9/18",
@@ -183,8 +173,7 @@
     "Happiness": 10,
     "Exercise Intensity": 7,
     "Caffiene": 200,
-    "Alcohol": 0,
-    "": ""
+    "Alcohol": 0
   },
   {
     "Measurement": "7/10/18",
@@ -200,8 +189,7 @@
     "Happiness": 6,
     "Exercise Intensity": 7,
     "Caffiene": 200,
-    "Alcohol": 0,
-    "": ""
+    "Alcohol": 0
   },
   {
     "Measurement": "7/11/18",
@@ -217,8 +205,7 @@
     "Happiness": 7,
     "Exercise Intensity": 7,
     "Caffiene": 200,
-    "Alcohol": 0,
-    "": ""
+    "Alcohol": 0
   },
   {
     "Measurement": "7/12/18",
@@ -234,8 +221,7 @@
     "Happiness": 5,
     "Exercise Intensity": 6,
     "Caffiene": 200,
-    "Alcohol": 0,
-    "": ""
+    "Alcohol": 0
   },
   {
     "Measurement": "7/13/18",
@@ -251,8 +237,7 @@
     "Happiness": 2,
     "Exercise Intensity": 0,
     "Caffiene": 200,
-    "Alcohol": 1,
-    "": ""
+    "Alcohol": 1
   },
   {
     "Measurement": "7/14/18",
@@ -268,8 +253,7 @@
     "Happiness": 2,
     "Exercise Intensity": 0,
     "Caffiene": 200,
-    "Alcohol": 0,
-    "": ""
+    "Alcohol": 0
   },
   {
     "Measurement": "7/15/18",
@@ -285,8 +269,7 @@
     "Happiness": 5,
     "Exercise Intensity": 8,
     "Caffiene": 200,
-    "Alcohol": 0,
-    "": ""
+    "Alcohol": 0
   },
   {
     "Measurement": "7/16/18",
@@ -302,8 +285,7 @@
     "Happiness": 4,
     "Exercise Intensity": 0,
     "Caffiene": 200,
-    "Alcohol": 0,
-    "": ""
+    "Alcohol": 0
   },
   {
     "Measurement": "7/17/18",
@@ -319,8 +301,7 @@
     "Happiness": 6,
     "Exercise Intensity": 2,
     "Caffiene": 200,
-    "Alcohol": 0,
-    "": ""
+    "Alcohol": 0
   },
   {
     "Measurement": "7/18/18",
@@ -336,8 +317,7 @@
     "Happiness": 6,
     "Exercise Intensity": 0,
     "Caffiene": 200,
-    "Alcohol": 0,
-    "": ""
+    "Alcohol": 0
   },
   {
     "Measurement": "7/19/18",
@@ -353,8 +333,7 @@
     "Happiness": 7,
     "Exercise Intensity": 6,
     "Caffiene": 0,
-    "Alcohol": 2,
-    "": ""
+    "Alcohol": 2
   },
   {
     "Measurement": "7/20/18",
@@ -370,8 +349,7 @@
     "Happiness": 8,
     "Exercise Intensity": 7,
     "Caffiene": 0,
-    "Alcohol": 0,
-    "": ""
+    "Alcohol": 0
   },
   {
     "Measurement": "7/21/18",
@@ -387,8 +365,7 @@
     "Happiness": 9,
     "Exercise Intensity": 6,
     "Caffiene": 0,
-    "Alcohol": 0,
-    "": ""
+    "Alcohol": 0
   },
   {
     "Measurement": "7/22/18",
@@ -404,8 +381,7 @@
     "Happiness": 8,
     "Exercise Intensity": 7,
     "Caffiene": 0,
-    "Alcohol": 0,
-    "": ""
+    "Alcohol": 0
   },
   {
     "Measurement": "7/23/18",
@@ -421,8 +397,7 @@
     "Happiness": 10,
     "Exercise Intensity": 10,
     "Caffiene": 250,
-    "Alcohol": 0,
-    "": ""
+    "Alcohol": 0
   },
   {
     "Measurement": "7/24/18",
@@ -438,8 +413,7 @@
     "Happiness": 6,
     "Exercise Intensity": 6,
     "Caffiene": 300,
-    "Alcohol": 0,
-    "": ""
+    "Alcohol": 0
   },
   {
     "Measurement": "7/25/18",
@@ -455,8 +429,7 @@
     "Happiness": 7,
     "Exercise Intensity": 8,
     "Caffiene": 350,
-    "Alcohol": 5,
-    "": ""
+    "Alcohol": 5
   },
   {
     "Measurement": "7/26/18",
@@ -472,8 +445,7 @@
     "Happiness": 6,
     "Exercise Intensity": 4,
     "Caffiene": 300,
-    "Alcohol": 3,
-    "": ""
+    "Alcohol": 3
   },
   {
     "Measurement": "7/27/18",
@@ -489,8 +461,7 @@
     "Happiness": 7,
     "Exercise Intensity": 9,
     "Caffiene": 350,
-    "Alcohol": 8,
-    "": ""
+    "Alcohol": 8
   },
   {
     "Measurement": "7/28/18",
@@ -506,8 +477,7 @@
     "Happiness": 2,
     "Exercise Intensity": 0,
     "Caffiene": 200,
-    "Alcohol": 0,
-    "": ""
+    "Alcohol": 0
   },
   {
     "Measurement": "7/29/18",
@@ -523,8 +493,7 @@
     "Happiness": 10,
     "Exercise Intensity": 10,
     "Caffiene": 100,
-    "Alcohol": 0,
-    "": ""
+    "Alcohol": 0
   },
   {
     "Measurement": "7/30/18",
@@ -540,7 +509,6 @@
     "Happiness": 7,
     "Exercise Intensity": 0,
     "Caffiene": 100,
-    "Alcohol": 0,
-    "": ""
+    "Alcohol": 0
   }
 ]
