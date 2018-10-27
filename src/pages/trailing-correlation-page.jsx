@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import DayCorrelationTable from '../componenets/day-correlation-table';
+import TrailingCorrelationTable from "../componenets/trailing-correlation-table";
 
 class TrailingCorrelationPage extends Component {
 
@@ -13,7 +13,7 @@ class TrailingCorrelationPage extends Component {
             <div>
                 <p>This is the trailing correlation table</p>
                 <br/>
-                <DayCorrelationTable/>
+                <TrailingCorrelationTable/>
             </div>
 
         )

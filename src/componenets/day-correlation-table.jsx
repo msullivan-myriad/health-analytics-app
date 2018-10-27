@@ -42,9 +42,6 @@ class DayCorrelationTable extends Component {
                     }];
 
 
-        console.table(this.correlationData);
-
-
     }
 
     formatDailyValuesKeysToFilter(dvk) {

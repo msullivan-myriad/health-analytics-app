@@ -21,3 +21,11 @@ body {
 .navigation ul li a {
     color: white;
 }
+
+.positive {
+    color: green;
+}
+
+.negative {
+    color: red;
+}
