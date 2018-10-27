@@ -22,7 +22,7 @@ class DataSetupService {
             dataObject.sugar.push(day.sugar);
         })
 
-        const dvKeys = this.getDailyValuesKeys(dailyValuesJson);
+        const dvKeys = this.getDailyValuesKeys();
         const dvList = this.createDailyValuesList(dailyValuesJson, dvKeys);
 
 
@@ -113,9 +113,10 @@ class DataSetupService {
 
     }
 
-    getDailyValuesKeys(dailyValues) {
-        return Object.keys(dailyValues[0]);
+    getDailyValuesKeys() {
+        return Object.keys(dailyValuesJson[0]);
     }
+
 
     //Create object of lists of daily value numbers when given a daily values object
     //Could be worth passing two dates to this in the future rather than blindly relying on
