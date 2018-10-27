@@ -13,6 +13,16 @@ class HomePage extends Component {
         this.correlationData = this.dataSetupService.getCorrelationData();
         this.dailyValuesKeys = this.dataSetupService.getDailyValuesKeys();
         this.dailyValuesKeysFilters = this.formatDailyValuesKeysToFilter(this.dailyValuesKeys);
+        this.correlationDirectionFilters = [
+            {
+                text: 'Positive',
+                value: 'positive',
+            },
+            {
+                text: 'Negative',
+                value: 'negative',
+            }
+        ];
         this.comparedAgainstFilters = [
                     {
                         text: 'Calories',
@@ -39,8 +49,8 @@ class HomePage extends Component {
 
     formatDailyValuesKeysToFilter(dvk) {
 
-        return dvk.map(key => {
-            return { text: key, value: key}
+        return dvk.slice(1).sort().map(key => {
+                return { text: key, value: key};
         })
 
     }
@@ -94,8 +104,15 @@ class HomePage extends Component {
                    return value.correlation_direction.charAt(0).toUpperCase() + value.correlation_direction.slice(1).toLowerCase();
                 },
                 sorter: (a,b) => {
-                    return a.correlations[0].correlation_direction - b.correlations[0].correlation_direction;
-                }
+                    if(a.correlations[0].correlation_direction < b.correlations[0].correlation_direction) { return -1; }
+                    if(a.correlations[0].correlation_direction> b.correlations[0].correlation_direction) { return 1; }
+                    return 0;
+                },
+                filters: this.correlationDirectionFilters,
+                onFilter: (value, record) => {
+                    return record.correlations[0].correlation_direction.indexOf(value) === 0;
+                },
+                filterMultiple: false,
 
             }
 
