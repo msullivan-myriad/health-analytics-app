@@ -1,22 +1,23 @@
 import React, { Component } from 'react';
 import DayCorrelationTable from '../componenets/day-correlation-table';
-class HomePage extends Component {
+
+class TrailingCorrelationPage extends Component {
 
     constructor(props){
         super(props);
     }
-
     render() {
 
         return (
 
             <div>
-                <p>This is the home page</p>
-                <p>Perhaps eventually there will be more stuff on it</p>
+                <p>This is the trailing correlation table</p>
+                <br/>
+                <DayCorrelationTable/>
             </div>
 
         )
     }
 }
 
-export default HomePage;
+export default TrailingCorrelationPage;

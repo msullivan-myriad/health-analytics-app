@@ -1,6 +1,23 @@
-/* */
-/* CREATE THIS FILE IN ./src/main.css */
-/* */
+
 body {
     line-height: 2;
+}
+
+.navigation {
+    background-color: black;
+    height: 90px;
+}
+
+.navigation ul {
+    float: right;
+    margin-right: 4%;
+}
+
+.navigation ul li {
+    display: inline-block;
+    padding: 30px;
+}
+
+.navigation ul li a {
+    color: white;
 }

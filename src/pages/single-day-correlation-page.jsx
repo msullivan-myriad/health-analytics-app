@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import DayCorrelationTable from '../componenets/day-correlation-table';
-class HomePage extends Component {
+
+class SingleDayCorrelationPage extends Component {
 
     constructor(props){
         super(props);
@@ -11,12 +12,13 @@ class HomePage extends Component {
         return (
 
             <div>
-                <p>This is the home page</p>
-                <p>Perhaps eventually there will be more stuff on it</p>
+                <p>Some text about the single day correlation table here</p>
+                <br/>
+                <DayCorrelationTable/>
             </div>
 
         )
     }
 }
 
-export default HomePage;
+export default SingleDayCorrelationPage;
