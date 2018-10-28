@@ -42,10 +42,6 @@ class TrailingCorrelationTable extends Component {
                         value: 'sugar',
                     }];
 
-
-        console.table(this.correlationData);
-
-
     }
 
     formatDailyValuesKeysToFilter(dvk) {
