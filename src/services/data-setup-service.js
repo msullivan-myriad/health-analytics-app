@@ -4,7 +4,7 @@ import mfpData from '../data/mfpdata.json';
 
 class DataSetupService {
 
-    getCorrelationData() {
+    getBasicCorrelationData() {
 
         const dataObject = {
             sodium: [],

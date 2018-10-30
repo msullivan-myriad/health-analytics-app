@@ -5,13 +5,12 @@ import { Table } from 'antd';
 class AllSingleDayCorrelationTable extends Component {
 
     constructor(props){
-        console.log('Getti here');
 
         super(props);
 
         this.dataSetupService = new DataSetupService;
 
-        this.correlationData = this.dataSetupService.getCorrelationData();
+        this.correlationData = this.dataSetupService.getBasicCorrelationData();
         this.dailyValuesKeys = this.dataSetupService.getDailyValuesKeys();
         this.dailyValuesKeysFilters = this.formatDailyValuesKeysToFilter(this.dailyValuesKeys);
 

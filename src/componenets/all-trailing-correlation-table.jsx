@@ -3,15 +3,17 @@ import DataSetupService from '../services/data-setup-service';
 import { Table } from 'antd';
 import TrailingCorrelationExpansionRecord from "./trailing-correlation-expansion-record";
 
-class TrailingCorrelationTable extends Component {
+class AllTrailingCorrelationTable extends Component {
 
     constructor(props){
+
+        console.log('All loading');
 
         super(props);
 
         this.dataSetupService = new DataSetupService;
 
-        this.correlationData = this.dataSetupService.getCorrelationData();
+        this.correlationData = this.dataSetupService.getBasicCorrelationData();
         this.dailyValuesKeys = this.dataSetupService.getDailyValuesKeys();
         this.dailyValuesKeysFilters = this.formatDailyValuesKeysToFilter(this.dailyValuesKeys);
         this.correlationDirectionFilters = [
@@ -171,4 +173,4 @@ class TrailingCorrelationTable extends Component {
     }
 }
 
-export default TrailingCorrelationTable;
+export default AllTrailingCorrelationTable;

@@ -3,9 +3,10 @@ import ReactDOM from "react-dom";
 import "antd/dist/antd.css"
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import HomePage from "./pages/home-page.jsx"
-import SingleDayCorrelationPage from "./pages/single-day-correlation-page";
-import TrailingCorrelationPage from "./pages/trailing-correlation-page";
+import BasicSingleDayCorrelationPage from "./pages/basic-single-day-correlation-page";
+import BasicTrailingCorrelationPage from "./pages/basic-trailing-correlation-page";
 import AllSingleDayCorrelationsPage from "./pages/all-single-day-correlations-page";
+import AllTrailingCorrelationPage from "./pages/all-trailing-correlation-page";
 
 const App = () => {
 
@@ -40,10 +41,10 @@ const App = () => {
 
                 <div className="page-body" style={{padding: '5%'}}>
                     <Route path="/" exact component={HomePage} />
-                    <Route path="/basic-single-day-correlations/" component={SingleDayCorrelationPage} />
-                    <Route path="/basic-trailing-correlations/" component={TrailingCorrelationPage} />
+                    <Route path="/basic-single-day-correlations/" component={BasicSingleDayCorrelationPage} />
+                    <Route path="/basic-trailing-correlations/" component={BasicTrailingCorrelationPage} />
                     <Route path="/all-single-day-correlations/" component={AllSingleDayCorrelationsPage} />
-                    <Route path="/all-trailing-correlations/" component={TrailingCorrelationPage} />
+                    <Route path="/all-trailing-correlations/" component={AllTrailingCorrelationPage} />
                 </div>
 
             </div>

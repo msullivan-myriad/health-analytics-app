@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import TrailingCorrelationTable from "../componenets/trailing-correlation-table";
+import BasicTrailingCorrelationTable from "../componenets/basic-trailing-correlation-table";
 
-class TrailingCorrelationPage extends Component {
+class BasicTrailingCorrelationPage extends Component {
 
     constructor(props){
         super(props);
@@ -13,11 +13,11 @@ class TrailingCorrelationPage extends Component {
             <div>
                 <p>This is the trailing correlation table</p>
                 <br/>
-                <TrailingCorrelationTable/>
+                <BasicTrailingCorrelationTable/>
             </div>
 
         )
     }
 }
 
-export default TrailingCorrelationPage;
+export default BasicTrailingCorrelationPage;
