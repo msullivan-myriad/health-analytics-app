@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import DayCorrelationTable from '../componenets/day-correlation-table';
+import BasicSingleDayCorrelationTable from '../componenets/basic-single-day-correlation-table';
 
 class SingleDayCorrelationPage extends Component {
 
@@ -14,7 +14,7 @@ class SingleDayCorrelationPage extends Component {
             <div>
                 <p>Some text about the single day correlation table here</p>
                 <br/>
-                <DayCorrelationTable/>
+                <BasicSingleDayCorrelationTable/>
             </div>
 
         )

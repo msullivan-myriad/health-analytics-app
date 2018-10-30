@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import DataSetupService from '../services/data-setup-service';
 import { Table } from 'antd';
 
-class DayCorrelationTable extends Component {
+class BasicSingleDayCorrelationTable extends Component {
 
     constructor(props){
 
@@ -13,6 +13,7 @@ class DayCorrelationTable extends Component {
         this.correlationData = this.dataSetupService.getCorrelationData();
         this.dailyValuesKeys = this.dataSetupService.getDailyValuesKeys();
         this.dailyValuesKeysFilters = this.formatDailyValuesKeysToFilter(this.dailyValuesKeys);
+
         this.correlationDirectionFilters = [
             {
                 text: 'Positive',
@@ -23,6 +24,7 @@ class DayCorrelationTable extends Component {
                 value: 'negative',
             }
         ];
+
         this.comparedAgainstFilters = [
                     {
                         text: 'Calories',
@@ -123,4 +125,4 @@ class DayCorrelationTable extends Component {
     }
 }
 
-export default DayCorrelationTable;
+export default BasicSingleDayCorrelationTable;
