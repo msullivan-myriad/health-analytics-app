@@ -113,8 +113,127 @@ class DataSetupService {
 
     }
 
+
+    getFullCorrelationData() {
+
+        const dataObject = {
+            sodium: [],
+            carbohydrates: [],
+            calories: [],
+            fat: [],
+            sugar: [],
+        };
+
+        mfpData.forEach(day => {
+            dataObject.sodium.push(day.sodium);
+            dataObject.carbohydrates.push(day.carbohydrates);
+            dataObject.calories.push(day.calories);
+            dataObject.fat.push(day.fat);
+            dataObject.sugar.push(day.sugar);
+        })
+
+
+        const dvKeys = this.getDailyValuesKeys();
+
+        const dvList = this.createDailyValuesList(dailyValuesJson, dvKeys);
+
+        const allLists = {};
+
+        Object.assign(allLists, dataObject, dvList);
+
+        const allListsKeys = Object.keys(allLists);
+
+
+        //List of all correlated object data
+
+        const correlatedData = [];
+
+        //Add a counter to enable keys in list
+        let counter = 0;
+
+        allListsKeys.forEach(key => {
+
+            const list = allLists[key];
+
+            Object.keys(allLists).forEach(doKey => {
+
+                //TODO: This will error out if there are not enough data points
+
+                const correlation1 = getPearsonCorrelation(list, allLists[doKey]);
+                const correlationDirection1 = correlation1 > 0 ? 'positive' : 'negative';
+
+                const correlation2 = getPearsonCorrelation(list.slice(1), allLists[doKey].slice(0,-1));
+                const correlationDirection2 = correlation2 > 0 ? 'positive' : 'negative';
+
+                const correlation3 = getPearsonCorrelation(list.slice(2), allLists[doKey].slice(0,-2));
+                const correlationDirection3 = correlation3 > 0 ? 'positive' : 'negative';
+
+                const correlation4 = getPearsonCorrelation(list.slice(3), allLists[doKey].slice(0,-3));
+                const correlationDirection4 = correlation4 > 0 ? 'positive' : 'negative';
+
+                const correlation5 = getPearsonCorrelation(list.slice(4), allLists[doKey].slice(0,-4));
+                const correlationDirection5 = correlation5 > 0 ? 'positive' : 'negative';
+
+                const correlation_total = correlation1 + correlation2 + correlation3 + correlation4 + correlation5;
+
+                counter++;
+
+                correlatedData.push({
+                    key: counter,
+                    field : key,
+                    compared_against : doKey,
+                    correlation_total: Math.abs(correlation_total),
+                    correlation_avg: Math.abs(correlation_total/5),
+                    correlation_total_direction: correlation_total > 0 ? 'positive' : 'negative',
+                    correlations: [
+                        {
+                            day: 1,
+                            correlation : Math.abs(correlation1),
+                            correlation_direction : correlationDirection1,
+                        },
+                        {
+                            day: 2,
+                            correlation : Math.abs(correlation2),
+                            correlation_direction : correlationDirection2,
+                        },
+                        {
+                            day: 3,
+                            correlation : Math.abs(correlation3),
+                            correlation_direction : correlationDirection3,
+                        },
+                        {
+                            day: 4,
+                            correlation : Math.abs(correlation4),
+                            correlation_direction : correlationDirection4,
+                        },
+                        {
+                            day: 5,
+                            correlation : Math.abs(correlation5),
+                            correlation_direction : correlationDirection5,
+                        },
+                    ]
+
+                })
+
+            })
+
+
+        })
+
+        correlatedData.sort((a, b) => {
+            return b.correlation_total - a.correlation_total;
+        })
+
+        return correlatedData;
+
+    }
+
     getDailyValuesKeys() {
-        return Object.keys(dailyValuesJson[0]);
+        return Object.keys(dailyValuesJson[0]).filter(key => {
+            if (key != 'Measurement') {
+                return true;
+            }
+        });
     }
 
 

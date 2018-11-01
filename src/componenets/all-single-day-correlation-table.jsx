@@ -10,7 +10,8 @@ class AllSingleDayCorrelationTable extends Component {
 
         this.dataSetupService = new DataSetupService;
 
-        this.correlationData = this.dataSetupService.getBasicCorrelationData();
+        this.correlationData = this.dataSetupService.getFullCorrelationData();
+
         this.dailyValuesKeys = this.dataSetupService.getDailyValuesKeys();
         this.dailyValuesKeysFilters = this.formatDailyValuesKeysToFilter(this.dailyValuesKeys);
 
