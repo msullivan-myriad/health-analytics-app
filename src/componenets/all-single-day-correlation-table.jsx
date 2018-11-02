@@ -26,30 +26,11 @@ class AllSingleDayCorrelationTable extends Component {
             }
         ];
 
-        this.comparedAgainstFilters = [
-                    {
-                        text: 'Calories',
-                        value: 'calories',
-                    }, {
-                        text: 'Carbohydrates',
-                        value: 'carbohydrates',
-                    }, {
-                        text: 'Fat',
-                        value: 'fat',
-                    }, {
-                        text: 'Sodium',
-                        value: 'sodium',
-                    }, {
-                        text: 'Sugar',
-                        value: 'sugar',
-                    }];
-
-
     }
 
-    formatAllListValuesKeysToFilter(dvk) {
+    formatAllListValuesKeysToFilter(list) {
 
-        return dvk.slice(1).sort().map(key => {
+        return list.slice(1).sort().map(key => {
                 return { text: key, value: key};
         })
 
@@ -64,6 +45,10 @@ class AllSingleDayCorrelationTable extends Component {
                 dataIndex: 'field',
                 key: 'field',
                 render: (value) => value.charAt(0).toUpperCase() + value.slice(1).toLowerCase(),
+                filters: this.allListsValuesKeysFilters,
+                onFilter: (value, record) => {
+                    return record.field.indexOf(value) === 0 || record.compared_against.indexOf(value) === 0;
+                },
                 sorter: (a, b) => {
                     if(a.field< b.field) { return -1; }
                     if(a.field> b.field) { return 1; }

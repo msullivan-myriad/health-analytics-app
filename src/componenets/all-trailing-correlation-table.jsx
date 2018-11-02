@@ -14,8 +14,9 @@ class AllTrailingCorrelationTable extends Component {
         this.dataSetupService = new DataSetupService;
 
         this.correlationData = this.dataSetupService.getFullCorrelationData();
-        this.dailyValuesKeys = this.dataSetupService.getDailyValuesKeys();
-        this.dailyValuesKeysFilters = this.formatDailyValuesKeysToFilter(this.dailyValuesKeys);
+
+        this.allListsValuesKeys = this.dataSetupService.getAllListsValuesKeys();
+        this.allListsValuesKeysFilters = this.formatAllListValuesKeysToFilter(this.allListsValuesKeys);
 
         this.correlationDirectionFilters = [
             {
@@ -28,29 +29,11 @@ class AllTrailingCorrelationTable extends Component {
             }
         ];
 
-        this.comparedAgainstFilters = [
-                    {
-                        text: 'Calories',
-                        value: 'calories',
-                    }, {
-                        text: 'Carbohydrates',
-                        value: 'carbohydrates',
-                    }, {
-                        text: 'Fat',
-                        value: 'fat',
-                    }, {
-                        text: 'Sodium',
-                        value: 'sodium',
-                    }, {
-                        text: 'Sugar',
-                        value: 'sugar',
-                    }];
-
     }
 
-    formatDailyValuesKeysToFilter(dvk) {
+    formatAllListValuesKeysToFilter(list) {
 
-        return dvk.slice(1).sort().map(key => {
+        return list.slice(1).sort().map(key => {
                 return { text: key, value: key};
         })
 
@@ -68,8 +51,10 @@ class AllTrailingCorrelationTable extends Component {
                 title: 'Field',
                 dataIndex: 'field',
                 key: 'field',
-                filters: this.dailyValuesKeysFilters,
-                onFilter: (value, record) => { return record.field.indexOf(value) === 0 },
+                filters: this.allListsValuesKeysFilters,
+                onFilter: (value, record) => {
+                    return record.field.indexOf(value) === 0 || record.compared_against.indexOf(value) === 0;
+                },
                 sorter: (a, b) => {
                     if(a.field< b.field) { return -1; }
                     if(a.field> b.field) { return 1; }
@@ -80,8 +65,6 @@ class AllTrailingCorrelationTable extends Component {
                 title: 'Compared Against',
                 dataIndex: 'compared_against',
                 key: 'compared_against',
-                filters: this.comparedAgainstFilters,
-                onFilter: (value, record) => record.compared_against.indexOf(value) === 0,
                 render: (value) => value.charAt(0).toUpperCase() + value.slice(1).toLowerCase(),
                 sorter: (a, b) => {
                     if(a.compared_against < b.compared_against) { return -1; }
