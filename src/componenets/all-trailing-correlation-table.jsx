@@ -13,9 +13,10 @@ class AllTrailingCorrelationTable extends Component {
 
         this.dataSetupService = new DataSetupService;
 
-        this.correlationData = this.dataSetupService.getBasicCorrelationData();
+        this.correlationData = this.dataSetupService.getFullCorrelationData();
         this.dailyValuesKeys = this.dataSetupService.getDailyValuesKeys();
         this.dailyValuesKeysFilters = this.formatDailyValuesKeysToFilter(this.dailyValuesKeys);
+
         this.correlationDirectionFilters = [
             {
                 text: 'Positive',
@@ -26,6 +27,7 @@ class AllTrailingCorrelationTable extends Component {
                 value: 'negative',
             }
         ];
+
         this.comparedAgainstFilters = [
                     {
                         text: 'Calories',
@@ -67,7 +69,7 @@ class AllTrailingCorrelationTable extends Component {
                 dataIndex: 'field',
                 key: 'field',
                 filters: this.dailyValuesKeysFilters,
-                onFilter: (value, record) => record.field.indexOf(value) === 0,
+                onFilter: (value, record) => { return record.field.indexOf(value) === 0 },
                 sorter: (a, b) => {
                     if(a.field< b.field) { return -1; }
                     if(a.field> b.field) { return 1; }
@@ -141,7 +143,6 @@ class AllTrailingCorrelationTable extends Component {
                 sorter: (a,b) => {
                     return a.correlations[4].correlation - b.correlations[4].correlation;
                 },
-
 
             }, {
                 title: 'Overall',

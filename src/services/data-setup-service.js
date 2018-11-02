@@ -4,6 +4,7 @@ import mfpData from '../data/mfpdata.json';
 
 class DataSetupService {
 
+
     getBasicCorrelationData() {
 
         const dataObject = {
@@ -152,8 +153,6 @@ class DataSetupService {
 
         allListsKeys.forEach(key => {
 
-            console.log(correlatedData);
-
             const list = allLists[key];
 
             Object.keys(allLists).forEach(allListsKey => {
@@ -227,9 +226,6 @@ class DataSetupService {
 
                 }
 
-                else {
-                    console.log('Is duplicate');
-                }
 
             })
 
@@ -250,6 +246,28 @@ class DataSetupService {
                 return true;
             }
         });
+    }
+
+    getAllListsValuesKeys() {
+
+        const dataObject = {
+            sodium: [],
+            carbohydrates: [],
+            calories: [],
+            fat: [],
+            sugar: [],
+        };
+
+        const dvKeys = this.getDailyValuesKeys();
+
+        const dvList = this.createDailyValuesList(dailyValuesJson, dvKeys);
+
+        const allLists = {};
+
+        Object.assign(allLists, dataObject, dvList);
+
+        return Object.keys(allLists);
+
     }
 
 

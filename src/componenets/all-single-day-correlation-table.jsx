@@ -12,8 +12,8 @@ class AllSingleDayCorrelationTable extends Component {
 
         this.correlationData = this.dataSetupService.getFullCorrelationData();
 
-        this.dailyValuesKeys = this.dataSetupService.getDailyValuesKeys();
-        this.dailyValuesKeysFilters = this.formatDailyValuesKeysToFilter(this.dailyValuesKeys);
+        this.allListsValuesKeys = this.dataSetupService.getAllListsValuesKeys();
+        this.allListsValuesKeysFilters = this.formatAllListValuesKeysToFilter(this.allListsValuesKeys);
 
         this.correlationDirectionFilters = [
             {
@@ -47,7 +47,7 @@ class AllSingleDayCorrelationTable extends Component {
 
     }
 
-    formatDailyValuesKeysToFilter(dvk) {
+    formatAllListValuesKeysToFilter(dvk) {
 
         return dvk.slice(1).sort().map(key => {
                 return { text: key, value: key};
@@ -63,8 +63,7 @@ class AllSingleDayCorrelationTable extends Component {
                 title: 'Field',
                 dataIndex: 'field',
                 key: 'field',
-                filters: this.dailyValuesKeysFilters,
-                onFilter: (value, record) => record.field.indexOf(value) === 0,
+                render: (value) => value.charAt(0).toUpperCase() + value.slice(1).toLowerCase(),
                 sorter: (a, b) => {
                     if(a.field< b.field) { return -1; }
                     if(a.field> b.field) { return 1; }
@@ -75,8 +74,6 @@ class AllSingleDayCorrelationTable extends Component {
                 title: 'Compared Against',
                 dataIndex: 'compared_against',
                 key: 'compared_against',
-                filters: this.comparedAgainstFilters,
-                onFilter: (value, record) => record.compared_against.indexOf(value) === 0,
                 render: (value) => value.charAt(0).toUpperCase() + value.slice(1).toLowerCase(),
                 sorter: (a, b) => {
                     if(a.compared_against < b.compared_against) { return -1; }
