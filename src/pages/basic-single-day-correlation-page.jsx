@@ -12,7 +12,7 @@ class SingleDayCorrelationPage extends Component {
         return (
 
             <div>
-                <p>Some text about the single day correlation table here</p>
+                <p>This is the basic single day correlation table.  This table allows you to filter, compare, sort, and analyse the primary food data fields (Calories, Carbs, Fat, Sodium, Sugar) against your own custom values</p>
                 <br/>
                 <BasicSingleDayCorrelationTable/>
             </div>
