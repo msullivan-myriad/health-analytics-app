@@ -11,11 +11,31 @@ print '['
 for x in daysList:
     day = client.get_date(2018, month, x)
     print '{'
-    print '\"date\": \"' + str(month) + '/' + str(x) + '/2018\",'
-    print '\"data\":'
-    print json.dumps(day.totals)
-    print '}'
 
+    #Content of the single day object
+
+    print '\"date\": \"' + str(month) + '/' + str(x) + '/2018\",'
+    print '\"data\":' + json.dumps(day.totals) + ','
+    print '\"foods\": ['
+
+    #Loop over the meals object and get every single food eaten for the day
+    dayMealLength = len(day.meals)        
+
+    for meal in day.meals:
+
+        mealEntriesLength = len(meal.entries)        
+
+        for entry in meal.entries:
+            entryString = str(entry)
+
+            #Entry already has nutrition data for each and every food item if this needs to be extended
+            print '\"' + entryString.split(',')[0] + '\",'
+
+    print ']'
+
+
+    #End of the single day object
+    print '}'
     if x != 30:
         print ','
 

@@ -1,0 +1,507 @@
+[
+{
+"date": "7/1/2018",
+"data":{"fiber": 0, "carbohydrates": 2, "calories": 10, "fat": 0, "sugar": 1, "protein": 0},
+"foods": [
+"Coffee - Black Coffee",
+"Bai - Drink",
+]
+}
+,
+{
+"date": "7/2/2018",
+"data":{"fiber": 67, "carbohydrates": 196, "calories": 3543, "fat": 182, "sugar": 70, "protein": 151},
+"foods": [
+"Meijer - Triple Berry Mix",
+"Grocery - Banana",
+"Generic - Spinich Raw",
+"Vegetable - Hass Avacado",
+"Kirkland - Cookies and Cream Protein Bar",
+"Flik - BBQ Pulled Pork",
+"Rib Crib - Cowboy Beans",
+"Trader Joe's - Sunflower Seeds",
+"Friendly's - Vanilla Ice Cream",
+"Basic - Deviled Eggs",
+"Broccoli Slaw - Slaw",
+"Oil - Olive",
+"Ramen Noodles - Chicken Flavored Noodles",
+]
+}
+,
+{
+"date": "7/3/2018",
+"data":{"fiber": 74, "carbohydrates": 227, "calories": 2915, "fat": 98, "sugar": 52, "protein": 106},
+"foods": [
+"Progresso - Chicken Tortilla Soup",
+"365 - Shredded Parmesean Cheese",
+"Healthy Choice - White Bean & Feta Salad",
+"Rib Crib - Cowboy Beans",
+"Kirkland - Cookies and Cream Protein Bar",
+"Vegetable - Hass Avacado",
+"Grocery - Banana",
+"Meijer - Triple Berry Mix",
+"Generic - Spinich Raw",
+"Fair Food - Cheese Curds ",
+"Coors Light - 16oz Pounder (Fat)",
+]
+}
+,
+{
+"date": "7/4/2018",
+"data":{"fiber": 0, "carbohydrates": 1, "calories": 5, "fat": 0, "sugar": 0, "protein": 0},
+"foods": [
+"Coffee - Black Coffee",
+]
+}
+,
+{
+"date": "7/5/2018",
+"data":{"fiber": 64, "carbohydrates": 308, "calories": 3333, "fat": 144, "sugar": 55, "protein": 250},
+"foods": [
+"the Rusty Taco - Pork Taco on Corn Tortilla",
+"Baker's - Unsweetened Baking Chocolate Bar (100% Cacao)",
+"Fruit and nut - Snack",
+"Wickedly Prime - Fruit Cocktail Trail Mix (Snack Pack)",
+"Kirkland - Cookies and Cream Protein Bar",
+"Homemade - Rotisserie Chicken With Skin (Half Chicken)",
+"Halo Top - Chocolate Ice Cream",
+"Russet Potato - Large",
+"Oil - Olive",
+]
+}
+,
+{
+"date": "7/6/2018",
+"data":{"fiber": 61, "carbohydrates": 362, "calories": 2988, "fat": 122, "sugar": 103, "protein": 150},
+"foods": [
+"Fruit and nut - Snack",
+"Raley's - Large Fuji Apple",
+"Kirkland - Cookies and Cream Protein Bar",
+"Diary Queen - Vanilla Cone - Large",
+"Russet Potato - Large",
+"Grocery - Banana",
+"Meijer - Triple Berry Mix",
+"Generic - Spinich Raw",
+"Egg - Egg",
+"Oil - Olive",
+"Kirkland - Roasted Seaweed Snacks",
+]
+}
+,
+{
+"date": "7/7/2018",
+"data":{"fiber": 27, "carbohydrates": 295, "calories": 4161, "fat": 169, "sugar": 120, "protein": 218},
+"foods": [
+"Hamburger Buns - Buns",
+"Ball Park - Hamburger Patty",
+"Kraft - Cilantro Lime Ranch",
+"Penny's - Four Bean Salad",
+"Sam's Club Potato Salad - Potato Salad",
+"Costco - Sweet Kale Veggie Salad",
+"Generic - Deer and Cheddar Stick",
+"Generic - Cashews",
+"Miller Light - Miller Light Beer",
+]
+}
+,
+{
+"date": "7/8/2018",
+"data":{"fiber": 0, "carbohydrates": 2, "calories": 10, "fat": 0, "sugar": 1, "protein": 0},
+"foods": [
+"Coffee - Black Coffee",
+"Bai - Drink",
+]
+}
+,
+{
+"date": "7/9/2018",
+"data":{"fiber": 82, "carbohydrates": 229, "calories": 3052, "fat": 157, "sugar": 68, "protein": 267},
+"foods": [
+"Kirkland - Cookies and Cream Protein Bar",
+"Deli Turkey - Thin Sliced Turkey",
+"Margherita (Corrected) - Hard Salami Slices",
+"Roasted beef - Beef",
+"Halo Top - Chocolate",
+"Amazing Grass - Green Superfood--the Original Superfood",
+"Kirkland - Cookies and Cream Protein Bar",
+"Generic - Spinich Raw",
+"Meijer - Triple Berry Mix",
+"Oil - Olive",
+"Egg - Egg",
+]
+}
+,
+{
+"date": "7/10/2018",
+"data":{"fiber": 87, "carbohydrates": 271, "calories": 3050, "fat": 145, "sugar": 120, "protein": 142},
+"foods": [
+"Fuji Apple - Fuji Apple",
+"Kirkland - Cookies and Cream Protein Bar",
+"Vegetable - Hass Avacado",
+"Season Brand - Sardines Skinless and Boneless",
+"Kirkland - Cookies and Cream Protein Bar",
+"Kirkland Signature - Bacon Crumbles",
+"Ken's - Creamy Caesar Dressing",
+"Halo Top - Chocolate",
+"Meijer - Triple Berry Mix",
+"Grocery - Banana",
+"Amazing Grass - Green Superfood--the Original Superfood",
+"Generic - Spinich Raw",
+"Fuji Apple - Fuji Apple",
+"Kirkland Natural Peanut Butter - Peanut Butter",
+"Miller Light - Miller Light Beer",
+]
+}
+,
+{
+"date": "7/11/2018",
+"data":{"fiber": 0, "carbohydrates": 2, "calories": 10, "fat": 0, "sugar": 1, "protein": 0},
+"foods": [
+"Coffee - Black Coffee",
+"Bai - Drink",
+]
+}
+,
+{
+"date": "7/12/2018",
+"data":{"fiber": 78, "carbohydrates": 286, "calories": 3337, "fat": 190, "sugar": 75, "protein": 159},
+"foods": [
+"Season Brand - Sardines Skinless and Boneless",
+"Vegetable - Hass Avacado",
+"Baker's - Unsweetened Baking Chocolate Bar (100% Cacao)",
+"Carrots - Fresh - Baby",
+"Kirkland - Cookies and Cream Protein Bar",
+"Egg - Egg",
+"Ken's - Creamy Caesar Dressing",
+"Kirkland Signature - Bacon Crumbles",
+"Mickie - Spinich Raw",
+"Russet Potato - Large",
+"Oil - Olive",
+"Stone Ridge Creamery Ice Cream - Chocolate Fudge Brownie",
+]
+}
+,
+{
+"date": "7/13/2018",
+"data":{"fiber": 54, "carbohydrates": 395, "calories": 3280, "fat": 110, "sugar": 54, "protein": 146},
+"foods": [
+"Kirkland - Cookies and Cream Protein Bar",
+"Ken's - Creamy Caesar Dressing",
+"Kirkland Signature - Bacon Crumbles",
+"Mickie - Spinich Raw",
+"Fair Food - Cheese Curds ",
+"Dairy Queen - Medium Chocolate Cone",
+"Butterfinger mini - Mini",
+"Corn State Fair - Corn Dog",
+"Iowa State Fair - Greek Gyro",
+"Cheesecake",
+"Kona Brewing Co. - Big Wave Golden Ale (Beercaloriescarbs.com)",
+]
+}
+,
+{
+"date": "7/14/2018",
+"data":{"fiber": 84, "carbohydrates": 235, "calories": 3173, "fat": 127, "sugar": 97, "protein": 193},
+"foods": [
+"Kirkland - Cookies and Cream Protein Bar",
+"Mickie - Spinich Raw",
+"Kirkland Signature - Bacon Crumbles",
+"Ken's - Creamy Caesar Dressing",
+"Amazing Grass - Protein Superfood",
+"Meijer - Triple Berry Mix",
+"Noodles & Company - Shrimp (2017)",
+"Noodles and Company - Zucchini Noodles Spicy Korean Beef - Large",
+"Blueberries",
+"Miller Light - Miller Light Beer",
+"Miller Light 16oz Draft - Miller Light 16oz Draft",
+]
+}
+,
+{
+"date": "7/15/2018",
+"data":{"fiber": 159, "carbohydrates": 448, "calories": 2952, "fat": 90, "sugar": 162, "protein": 229},
+"foods": [
+"Qdoba - Burrito Chicken Bowl",
+"Fuji Apple - Fuji Apple",
+"Kirkland - Cookies and Cream Protein Bar",
+"Vega Protein & Greens - Vanilla",
+"Meijer - Triple Berry Mix",
+"Mickie - Spinich Raw",
+"Classico - Spicy Tomato & Basil (Correct)",
+"Zuccini - Fresh",
+"Halo Top - Pancakes & Waffles",
+"Halo Top - Birthday Cake",
+"Kirkland - Cookies and Cream Protein Bar",
+]
+}
+,
+{
+"date": "7/16/2018",
+"data":{"fiber": 79, "carbohydrates": 330, "calories": 3041, "fat": 164, "sugar": 153, "protein": 125},
+"foods": [
+"simply smart bar - cranberry pumpkin seed",
+"Country Archer - Beef Stick - Original",
+"Baker's - Unsweetened Baking Chocolate Bar (100% Cacao)",
+"Classico - Spicy Tomato & Basil (Correct)",
+"Zuccini - Fresh",
+"Classico - Sun-Dried Tomato Pesto",
+"Great Value - Shredded Cheese (Fiesta Blend (Finely Shredded))",
+"Halo Top - Chocolate Chip Cookie Dough (Container Info)",
+"Kind Bar - Salted Caramel Dark Chocolate Almond",
+"Raley's - Large Fuji Apple",
+"Kirkland Natural Peanut Butter - Peanut Butter",
+"Halo Top - Cinnamon Roll [Grams]",
+"Meijer - Triple Berry Mix",
+"Mickie - Spinich Raw",
+]
+}
+,
+{
+"date": "7/17/2018",
+"data":{"fiber": 0, "carbohydrates": 1, "calories": 5, "fat": 0, "sugar": 0, "protein": 0},
+"foods": [
+"Coffee - Black Coffee",
+]
+}
+,
+{
+"date": "7/18/2018",
+"data":{"fiber": 114, "carbohydrates": 300, "calories": 3679, "fat": 222, "sugar": 58, "protein": 198},
+"foods": [
+"Carrots - Fresh - Baby",
+"Vegetable - Hass Avacado",
+"Season Brand - Sardines Skinless and Boneless",
+"Baker's - Unsweetened Baking Chocolate Bar (100% Cacao)",
+"Jif - Smooth Peanut Butter",
+"Kirkland - Cookies and Cream Protein Bar",
+"Qdoba - Burrito Chicken Bowl",
+"Halo Top - Oatmeal Cookie",
+"Mickie - Spinich Raw",
+"Ken's - Creamy Caesar Dressing",
+"Kirkland - Cookies and Cream Protein Bar",
+"Kirkland Signature - Bacon Crumbles",
+"Triscuits - Triscuits",
+"Great Value - Shredded Cheese (Fiesta Blend (Finely Shredded))",
+]
+}
+,
+{
+"date": "7/19/2018",
+"data":{"fiber": 60, "carbohydrates": 403, "calories": 3388, "fat": 118, "sugar": 197, "protein": 238},
+"foods": [
+"Applebee's - Grilled Chicken Bacon Wrap",
+"Old Trapper - Old Fashioned Beef Jerky Corrected",
+"Kind Bar - Dark Chocolate Almond Mint",
+"Blueberries",
+"Halo Top - Candy Bar (Grams)",
+"Homemade - Chocolate Macaroon Cookie",
+"Keviita - Kevita",
+"Mickie - Spinich Raw",
+"Meijer - Triple Berry Mix",
+"Vegetable - Hass Avacado",
+"Zuccini - Fresh",
+"Generic Restaurant - Marinara Sauce",
+"Bragg - Nutritional Yeast Seasoning",
+]
+}
+,
+{
+"date": "7/20/2018",
+"data":{"fiber": 88, "carbohydrates": 335, "calories": 3423, "fat": 149, "sugar": 92, "protein": 181},
+"foods": [
+"Country Archer - Beef Stick - Original",
+"Vegetable - Hass Avacado",
+"Chipotle - Chicken Burrito Bowl",
+"simply smart bar - cranberry pumpkin seed",
+"Bragg - Nutritional Yeast Seasoning",
+"Keviita - Kevita",
+"Mickie - Spinich Raw",
+"Meijer - Triple Berry Mix",
+"Veggie Straws - Veggie Straw Chips",
+"Raspberries - Raw",
+"Wishbone - Thousand Island Dressing",
+"Dressing - Italian",
+"365 - Shredded Parmesean Cheese",
+"Hunt's - Pasta Sauce (Meat)",
+"Wegmans - Ground Beef",
+"Pasta - Cooked Spaghetti Noodles",
+"Aladdin - Garlic Bread",
+"Tootsie Roll - Candy",
+]
+}
+,
+{
+"date": "7/21/2018",
+"data":{"fiber": 27, "carbohydrates": 331, "calories": 3249, "fat": 174, "sugar": 140, "protein": 105},
+"foods": [
+"Jif - Smooth Peanut Butter",
+"Raley's - Large Fuji Apple",
+"Kirkland* Signature - Nut Bar",
+"Veggie Straws - Veggie Straw Chips",
+"Edy's - Cookie Dough Ice Cream",
+"Fuddruckers - Elk Burger (on Wheat Bun)",
+"Large fries - Large Fries",
+"Bacon - Fried",
+]
+}
+,
+{
+"date": "7/22/2018",
+"data":{"fiber": 43, "carbohydrates": 299, "calories": 2355, "fat": 98, "sugar": 182, "protein": 81},
+"foods": [
+"Veggie Straws - Veggie Straw Chips",
+"Jif - Smooth Peanut Butter",
+"Kirkland* Signature - Nut Bar",
+"Kirkland* Signature - Nut Bar",
+"Grocery - Banana",
+"Cherries",
+"Chicken brat - Brat",
+"Raley's - Large Fuji Apple",
+]
+}
+,
+{
+"date": "7/23/2018",
+"data":{"fiber": 48, "carbohydrates": 367, "calories": 2994, "fat": 135, "sugar": 212, "protein": 99},
+"foods": [
+"Grocery - Banana",
+"Parkhurst - Peas Sugar Snap",
+"Kirkland - Cashew Cluster",
+"Veggie Straws - Veggie Straw Chips",
+"Chicken brat - Brat",
+"Cherries",
+"Raley's - Large Fuji Apple",
+"Veggie Straws - Veggie Straw Chips",
+"Jif - Smooth Peanut Butter",
+]
+}
+,
+{
+"date": "7/24/2018",
+"data":{"fiber": 34, "carbohydrates": 272, "calories": 3076, "fat": 182, "sugar": 78, "protein": 95},
+"foods": [
+"Veggie Straws - Veggie Straw Chips",
+"Jif - Smooth Peanut Butter",
+"Raley's - Large Fuji Apple",
+"Large fries - Large Fries",
+"Primal Kitchen - Chipotle Lime Mayo",
+"Chicken brat - Brat",
+"Mickie - Spinich Raw",
+"Hamburger Buns - Buns",
+"Oil - Olive",
+"Kirkland - Cashew Cluster",
+"Grocery - Banana",
+"Parkhurst - Peas Sugar Snap",
+"Jif - Smooth Peanut Butter",
+"Veggie Straws - Veggie Straw Chips",
+]
+}
+,
+{
+"date": "7/25/2018",
+"data":{"fiber": 38, "carbohydrates": 249, "calories": 3690, "fat": 215, "sugar": 86, "protein": 208},
+"foods": [
+"Kirkland* Signature - Nut Bar",
+"Veggie Straws - Veggie Straw Chips",
+"Winn Dixie - Mini Cucumbers",
+"Jif - Smooth Peanut Butter",
+"Kirkland - Cashew Cluster",
+"Raley's - Large Fuji Apple",
+"Zuccini - Fresh",
+"Costco - St Louis Ribs",
+"Wendy's - French Fries (Medium)",
+"Homemade - Rotisserie Chicken With Skin (Half Chicken)",
+"Dairy Queen - Medium Chocolate Cone",
+"Oil - Olive",
+"Texas Toast - Texas Toast",
+]
+}
+,
+{
+"date": "7/26/2018",
+"data":{"fiber": 0, "carbohydrates": 1, "calories": 5, "fat": 0, "sugar": 0, "protein": 0},
+"foods": [
+"Coffee - Black Coffee",
+]
+}
+,
+{
+"date": "7/27/2018",
+"data":{"fiber": 29, "carbohydrates": 242, "calories": 3155, "fat": 166, "sugar": 96, "protein": 152},
+"foods": [
+"Kirkland* Signature - Nut Bar",
+"Raley's - Large Fuji Apple",
+"Veggie Straws - Veggie Straw Chips",
+"Jif - Smooth Peanut Butter",
+"Pork - Pork Chops",
+"Ruby Tuesday's - Crab Cake",
+"Applebee's - House Salad With Ranch",
+"Sweet Potatoes Fries - Cody's",
+"Famous Dave's - Bbq Sauce",
+"Homemade - Brown Sugar Grilled Salmon",
+"Generic - Blue Moon Belgian White",
+]
+}
+,
+{
+"date": "7/28/2018",
+"data":{"fiber": 60, "carbohydrates": 421, "calories": 3764, "fat": 183, "sugar": 156, "protein": 130},
+"foods": [
+"Kirkland - Cashew Cluster",
+"Raley's - Large Fuji Apple",
+"Veggie Straws - Veggie Straw Chips",
+"Parkhurst - Peas Sugar Snap",
+"Steak - Generic",
+"Russet Potato - Large",
+"Butter - Salted",
+"ranch dressing - Dressing",
+"Outtakes - Traditional Cole Slaw",
+"Watermelon",
+"Debbie's - Cantelope",
+"Eurest - Chipotle Sour Cream",
+"Vegetable oil - Vegetable Oil",
+"Heinz 57 - Sauce",
+"Carrots - Fresh - Baby",
+"Schnucks - Baked Beans Bacon",
+]
+}
+,
+{
+"date": "7/29/2018",
+"data":{"fiber": 34, "carbohydrates": 317, "calories": 3852, "fat": 178, "sugar": 147, "protein": 142},
+"foods": [
+"Keebler - Toasteds Party Pack",
+"Jalapeño pimento cheese - Dip",
+"salmon - Smoked",
+"Raley's - Large Fuji Apple",
+"Meijer - Triple Berry Mix",
+"Gfs - Chocolate Covered Raisens",
+"Eillien's - Chocolate Cover Almonds",
+"Lifeworks - Honey-glazed Salmon",
+"Vegetable - Hass Avacado",
+"Broccoli Slaw - Slaw",
+"Bacon - Fried",
+"Dairy Queen - Icecream Cake",
+"Albertsons - Raisens",
+"Brut Champagne - Brut Champagne",
+"Liquor - Bourbon",
+]
+}
+,
+{
+"date": "7/30/2018",
+"data":{"fiber": 66, "carbohydrates": 291, "calories": 3237, "fat": 169, "sugar": 141, "protein": 193},
+"foods": [
+"Kind - Crunchy Peanut Butter",
+"Strawberries",
+"Chicken brat - Brat",
+"Egg - Egg",
+"Oil - Olive",
+"Halo Top Tracey - Mint Chip",
+"Meijer - Triple Berry Mix",
+"Mickie - Spinich Raw",
+"Veggie Straws - Veggie Straw Chips",
+"Amazing Grass - Green Superfood--the Original Superfood",
+]
+}
+]
