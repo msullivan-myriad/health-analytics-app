@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import BasicTrailingCorrelationTable from "../componenets/basic-trailing-correlation-table";
 import AllSingleDayCorrelationTable from "../componenets/all-single-day-correlation-table";
+
 class HomePage extends Component {
 
     constructor(props){

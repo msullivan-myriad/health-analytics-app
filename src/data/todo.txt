@@ -1,0 +1,18 @@
+MFP ToDos
+
+* Trend examination of top and bottom numbers (10s, 1s, top quartile, and bottom quartile).
+    * This section will have averages of each other value when the selected value is examined (ie when happiness is 10 sugar averages 20, caffeine 0, sleep quality 8).
+    * Maybe it is too much for now, but it would be nice to include individual food item correlations in this as well
+    * The big outstanding issue here is that the user can have different ’types’ of measurements (binary, scale, amounts) so it may require building out the user input table before adding this feature
+* Variance tracking.  When a value, whether food or custom input changes drastically from one day to the next pay attention to all other changes
+    * No real idea how to do this yet, but I think it would be a really worthwhile feature
+* Create a ‘spreadsheet’ essentially for value entry
+    * Before this spreadsheet is created the user could answer a form for what values to include, or this could be editable in the spreadsheet itself?  Need to think on this
+* Food correlation
+    * Create a list of every single food item, this will get built while looping over the days
+    * Looping over a given day
+        * Check if the food is in the list, if not, add it
+        * That food item will be an object with every single user generated value on it, each user generated value will be a list the current values are added to that list
+    * After looping is finished each food can be evaluated for totals and accuracy (is there are 30 instances vs 1)
+    * Multiple items in breakfast/lunch/dinner should only be counted once here
+
