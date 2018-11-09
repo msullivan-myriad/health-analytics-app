@@ -28,33 +28,44 @@ class DataSetupService {
 
     }
 
-    getIndividualFoodCorrelationData() {
+    getIndividualFoodWithRelatedDailyValueList() {
 
         const dvKeys = this.getDailyValuesKeys();
         const dvList = this.createDailyValuesList(dailyValuesJson, dvKeys);
         const individualFoodsData = {};
 
+        console.log(dvList);
+
+        let dayCount = 0;
+
         mfpData.forEach(day => {
 
             day.foods.forEach(food => {
 
-                individualFoodsData[food]='test';
+                //If food entry doesn't yet exist add it with every daily value key, each with an empty array
+                if (!individualFoodsData.hasOwnProperty(food)) {
 
+                    individualFoodsData[food]={};
+                    Object.assign(individualFoodsData[food], dvList)
 
-                //Need to start adding every measurement to each food item here
-                if (individualFoodsData.hasOwnProperty(food)) {
-                    individualFoodsData[food]='duplicate!';
+                    dvKeys.forEach(key => {
+                        individualFoodsData[food][key]= [];
+                    })
+
                 }
 
-                else {
-                    individualFoodsData[food]='OG';
-                }
+                //Add the value of the current day to every daily value for this food item
+                dvKeys.forEach(key => {
+                    individualFoodsData[food][key].push(dvList[key][dayCount]);
+                })
 
             })
 
+            dayCount++;
+
         })
 
-        console.log(individualFoodsdata)
+        return individualFoodsData;
 
     }
 
