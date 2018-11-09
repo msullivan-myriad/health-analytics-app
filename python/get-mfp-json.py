@@ -19,17 +19,23 @@ for x in daysList:
     print '\"foods\": ['
 
     #Loop over the meals object and get every single food eaten for the day
-    dayMealLength = len(day.meals)        
+
+    isNotFirstFoodPrinted = False
 
     for meal in day.meals:
 
-        mealEntriesLength = len(meal.entries)        
-
         for entry in meal.entries:
-            entryString = str(entry)
 
+            #Every element in this list should have a comma afterwards other than the first item
+            if isNotFirstFoodPrinted:
+                print ','
+
+            isNotFirstFoodPrinted = True
+
+
+            entryString = str(entry)
             #Entry already has nutrition data for each and every food item if this needs to be extended
-            print '\"' + entryString.split(',')[0] + '\",'
+            print '\"' + entryString.split(',')[0] + '\"'
 
     print ']'
 
