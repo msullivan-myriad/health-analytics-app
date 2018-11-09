@@ -28,6 +28,14 @@ class DataSetupService {
 
     }
 
+    getIndividualFoodCorrelationData() {
+
+        const dvKeys = this.getDailyValuesKeys();
+        const dvList = this.createDailyValuesList(dailyValuesJson, dvKeys);
+
+        console.log(dvList);
+    }
+
     getBasicCorrelationData() {
 
         const dataObject = this.getInitialDataObject();

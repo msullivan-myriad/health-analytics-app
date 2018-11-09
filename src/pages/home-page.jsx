@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import BasicTrailingCorrelationTable from "../componenets/basic-trailing-correlation-table";
-import AllSingleDayCorrelationTable from "../componenets/all-single-day-correlation-table";
+import IndividualFoodCorrelationTable from "../componenets/individual-food-correlation-table";
 
 class HomePage extends Component {
 
@@ -10,16 +9,11 @@ class HomePage extends Component {
 
     render() {
 
-        /*
-        <BasicTrailingCorrelationTable/>
-        */
-
         return (
 
             <div>
                 <p>This is the home page</p>
-                <p>Perhaps eventually there will be more stuff on it</p>
-                <AllSingleDayCorrelationTable/>
+                <IndividualFoodCorrelationTable/>
             </div>
 
         )
