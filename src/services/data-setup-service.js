@@ -1,14 +1,15 @@
 import { getPearsonCorrelation } from "../helpers/get-pearsons-correlation";
 import dailyValuesJson from '../data/formatted-daily-values.json';
-import mfpData from '../data/mfpdata.json';
+import mfpData from '../data/mfpdata-2.json';
 
 class DataSetupService {
 
 
-    getBasicCorrelationData() {
+    getInitialDataObject() {
 
+        //TODO: These keys should be dynamic
         const dataObject = {
-            sodium: [],
+            fiber: [],
             carbohydrates: [],
             calories: [],
             fat: [],
@@ -16,13 +17,20 @@ class DataSetupService {
         };
 
         mfpData.forEach(day => {
-            dataObject.sodium.push(day.sodium);
-            dataObject.carbohydrates.push(day.carbohydrates);
-            dataObject.calories.push(day.calories);
-            dataObject.fat.push(day.fat);
-            dataObject.sugar.push(day.sugar);
+            dataObject.fiber.push(day.data.fiber);
+            dataObject.carbohydrates.push(day.data.carbohydrates);
+            dataObject.calories.push(day.data.calories);
+            dataObject.fat.push(day.data.fat);
+            dataObject.sugar.push(day.data.sugar);
         })
 
+        return dataObject;
+
+    }
+
+    getBasicCorrelationData() {
+
+        const dataObject = this.getInitialDataObject();
         const dvKeys = this.getDailyValuesKeys();
         const dvList = this.createDailyValuesList(dailyValuesJson, dvKeys);
 
@@ -117,25 +125,8 @@ class DataSetupService {
 
     getFullCorrelationData() {
 
-        const dataObject = {
-            sodium: [],
-            carbohydrates: [],
-            calories: [],
-            fat: [],
-            sugar: [],
-        };
-
-        mfpData.forEach(day => {
-            dataObject.sodium.push(day.sodium);
-            dataObject.carbohydrates.push(day.carbohydrates);
-            dataObject.calories.push(day.calories);
-            dataObject.fat.push(day.fat);
-            dataObject.sugar.push(day.sugar);
-        })
-
-
+        const dataObject = this.getInitialDataObject();
         const dvKeys = this.getDailyValuesKeys();
-
         const dvList = this.createDailyValuesList(dailyValuesJson, dvKeys);
 
         const allLists = {};
@@ -250,8 +241,9 @@ class DataSetupService {
 
     getAllListsValuesKeys() {
 
+        //TODO: These keys should be dynamic
         const dataObject = {
-            sodium: [],
+            fiber: [],
             carbohydrates: [],
             calories: [],
             fat: [],
@@ -259,7 +251,6 @@ class DataSetupService {
         };
 
         const dvKeys = this.getDailyValuesKeys();
-
         const dvList = this.createDailyValuesList(dailyValuesJson, dvKeys);
 
         const allLists = {};
