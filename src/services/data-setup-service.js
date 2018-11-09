@@ -34,8 +34,6 @@ class DataSetupService {
         const dvList = this.createDailyValuesList(dailyValuesJson, dvKeys);
         const individualFoodsData = {};
 
-        console.log(dvList);
-
         let dayCount = 0;
 
         mfpData.forEach(day => {
@@ -66,6 +64,27 @@ class DataSetupService {
         })
 
         return individualFoodsData;
+
+    }
+
+    getFoodItemsWithDailyValueAverages() {
+
+        const foodData = this.getIndividualFoodWithRelatedDailyValueList();
+        const dvKeys = this.getDailyValuesKeys();
+
+
+        Object.keys(foodData).forEach(foodDataKey => {
+
+            dvKeys.forEach(dvKey => {
+                const dailyValue = foodData[foodDataKey][dvKey];
+                const reduced = dailyValue.reduce((a, b) => a + b) / dailyValue.length;
+                foodData[foodDataKey][dvKey] = Math.round(reduced * 100)/100;
+            })
+
+
+        });
+
+        return foodData;
 
     }
 

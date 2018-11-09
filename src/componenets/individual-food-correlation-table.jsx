@@ -9,7 +9,10 @@ class IndividualFoodCorrelationTable extends Component {
         super(props);
 
         this.dataSetupService = new DataSetupService;
-        this.correlationData = this.dataSetupService.getIndividualFoodWithRelatedDailyValueList();
+        this.correlationData = this.dataSetupService.getFoodItemsWithDailyValueAverages();
+
+        //Need some kind of logic about accuracy of the number
+        console.log(this.correlationData);
 
     }
 
