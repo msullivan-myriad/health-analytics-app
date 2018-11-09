@@ -32,8 +32,30 @@ class DataSetupService {
 
         const dvKeys = this.getDailyValuesKeys();
         const dvList = this.createDailyValuesList(dailyValuesJson, dvKeys);
+        const individualFoodsData = {};
 
-        console.log(dvList);
+        mfpData.forEach(day => {
+
+            day.foods.forEach(food => {
+
+                individualFoodsData[food]='test';
+
+
+                //Need to start adding every measurement to each food item here
+                if (individualFoodsData.hasOwnProperty(food)) {
+                    individualFoodsData[food]='duplicate!';
+                }
+
+                else {
+                    individualFoodsData[food]='OG';
+                }
+
+            })
+
+        })
+
+        console.log(individualFoodsdata)
+
     }
 
     getBasicCorrelationData() {
