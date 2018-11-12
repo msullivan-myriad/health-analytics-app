@@ -72,7 +72,6 @@ class DataSetupService {
         const foodData = this.getIndividualFoodWithRelatedDailyValueList();
         const dvKeys = this.getDailyValuesKeys();
 
-
         Object.keys(foodData).forEach(foodDataKey => {
 
             dvKeys.forEach(dvKey => {
@@ -80,7 +79,6 @@ class DataSetupService {
                 const reduced = dailyValue.reduce((a, b) => a + b) / dailyValue.length;
                 foodData[foodDataKey][dvKey] = Math.round(reduced * 100)/100;
             })
-
 
         });
 
