@@ -9,20 +9,33 @@ class IndividualFoodCorrelationTable extends Component {
         super(props);
 
         this.dataSetupService = new DataSetupService;
-        this.correlationData = this.dataSetupService.getFoodItemsWithDailyValueAverages();
+        this.correlationData = this.getFormattedFoodItemsData();
+        this.columns =  this.getFormattedColumnsData();
 
-        //Need some kind of logic about accuracy of the number
         console.log(this.correlationData);
 
-        const columns =  this.getFormattedColumnsData();
+    }
 
-        console.log(columns);
+    getFormattedFoodItemsData() {
+        const foodData = this.dataSetupService.getFoodItemsWithDailyValueAverages();
+        let currentKeyValue = 1;
 
+        const correlationData = Object.keys(foodData).map(theKey => {
+
+            const foodDataTempObject = foodData[theKey];
+            foodDataTempObject.food = theKey;
+            foodDataTempObject.key = currentKeyValue;
+            currentKeyValue++;
+
+            return foodDataTempObject;
+        })
+
+        return correlationData;
     }
 
     getFormattedColumnsData() {
 
-        const keys = this.dataSetupService.getAllListsValuesKeys();
+        const keys = this.dataSetupService.getDailyValuesKeys();
         const columns = [
             {
                 title: 'Food',
@@ -47,37 +60,9 @@ class IndividualFoodCorrelationTable extends Component {
 
     render() {
 
-
-        const dataSource = [{
-            key: '1',
-            name: 'Mike',
-            age: 32,
-            address: '10 Downing Street'
-        }, {
-            key: '2',
-            name: 'John',
-            age: 42,
-            address: '10 Downing Street'
-        }];
-
-        const columns = [{
-            title: 'Food',
-            dataIndex: 'food',
-            key: 'food',
-        }, {
-            title: 'Age',
-            dataIndex: 'age',
-            key: 'age',
-        }, {
-            title: 'Address',
-            dataIndex: 'address',
-            key: 'address',
-        }];
-
-
         return (
             <div>
-                <Table dataSource={dataSource} columns={columns} />
+                <Table dataSource={this.correlationData} columns={this.columns} size="small"/>
             </div>
         )
     }
