@@ -40,7 +40,8 @@ class IndividualFoodCorrelationTable extends Component {
             {
                 title: 'Food',
                 dataIndex: 'food',
-                key: 'food'
+                key: 'food',
+                width: 400
             }
         ];
 
@@ -50,6 +51,12 @@ class IndividualFoodCorrelationTable extends Component {
                 title: theKey,
                 dataIndex: theKey,
                 key: theKey,
+                width: 300,
+                sorter: (a, b) => {
+                    if(a[theKey] < b[theKey]) { return -1; }
+                    if(a[theKey] > b[theKey]) { return 1; }
+                    return 0;
+                }
             })
         })
 
@@ -62,7 +69,7 @@ class IndividualFoodCorrelationTable extends Component {
 
         return (
             <div>
-                <Table dataSource={this.correlationData} columns={this.columns} size="small"/>
+                <Table dataSource={this.correlationData} columns={this.columns} size="middle" scroll={{ x: 1500, y: 300 }}/>
             </div>
         )
     }
