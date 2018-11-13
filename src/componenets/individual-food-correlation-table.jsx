@@ -8,10 +8,15 @@ class IndividualFoodCorrelationTable extends Component {
 
         super(props);
 
+        this.foodColumnWidth = 250;
+        this.mainColumnWidths = 150;
+
         this.dataSetupService = new DataSetupService;
         this.correlationData = this.getFormattedFoodItemsData();
         this.columns =  this.getFormattedColumnsData();
+        this.tableScrollSize = (this.columns.length - 1)  *  this.mainColumnWidths + this.foodColumnWidth;
 
+        console.log(this.tableScrollSize);
         console.log(this.correlationData);
 
     }
@@ -41,7 +46,8 @@ class IndividualFoodCorrelationTable extends Component {
                 title: 'Food',
                 dataIndex: 'food',
                 key: 'food',
-                width: 400
+                width: this.foodColumnWidth,
+                fixed: 'left'
             }
         ];
 
@@ -51,7 +57,7 @@ class IndividualFoodCorrelationTable extends Component {
                 title: theKey,
                 dataIndex: theKey,
                 key: theKey,
-                width: 300,
+                width: this.mainColumnWidths,
                 sorter: (a, b) => {
                     if(a[theKey] < b[theKey]) { return -1; }
                     if(a[theKey] > b[theKey]) { return 1; }
@@ -69,7 +75,7 @@ class IndividualFoodCorrelationTable extends Component {
 
         return (
             <div>
-                <Table dataSource={this.correlationData} columns={this.columns} size="middle" scroll={{ x: 1500, y: 300 }}/>
+                <Table dataSource={this.correlationData} columns={this.columns} size="middle" scroll={{ x: this.tableScrollSize, y: 800 }}/>
             </div>
         )
     }
