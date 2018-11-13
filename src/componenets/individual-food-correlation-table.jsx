@@ -17,7 +17,6 @@ class IndividualFoodCorrelationTable extends Component {
         this.tableScrollSize = (this.columns.length - 1)  *  this.mainColumnWidths + this.foodColumnWidth;
 
         console.log(this.tableScrollSize);
-        console.log(this.correlationData);
 
     }
 
@@ -36,11 +35,13 @@ class IndividualFoodCorrelationTable extends Component {
         })
 
         return correlationData;
+
     }
 
     getFormattedColumnsData() {
 
         const keys = this.dataSetupService.getDailyValuesKeys();
+
         const columns = [
             {
                 title: 'Food',
@@ -48,6 +49,17 @@ class IndividualFoodCorrelationTable extends Component {
                 key: 'food',
                 width: this.foodColumnWidth,
                 fixed: 'left'
+            },
+            {
+                title: 'Days Consumed',
+                dataIndex: 'daysConsumed',
+                key: 'daysConsumed',
+                width: this.mainColumnWidths,
+                sorter: (a, b) => {
+                    if(a.daysConsumed < b.daysConsumed) { return -1; }
+                    if(a.daysConsumed > b.daysConsumed) { return 1; }
+                    return 0;
+                }
             }
         ];
 

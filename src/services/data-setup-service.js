@@ -77,7 +77,10 @@ class DataSetupService {
             dvKeys.forEach(dvKey => {
                 const dailyValue = foodData[foodDataKey][dvKey];
                 const reduced = dailyValue.reduce((a, b) => a + b) / dailyValue.length;
-                foodData[foodDataKey][dvKey] = Math.round(reduced * 100)/100;
+
+                foodData[foodDataKey][dvKey] =  Math.round(reduced * 100)/100;
+                foodData[foodDataKey].daysConsumed = dailyValue.length;
+
             })
 
         });
